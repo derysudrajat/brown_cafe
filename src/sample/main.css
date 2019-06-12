@@ -1,0 +1,85 @@
+.btn_list_add{
+    -fx-background-radius : 30;
+    -fx-background-color: #7C4923;
+    -fx-content-display: CENTER;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-family: "Product Sans";
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-graphic-text-gap: 4;
+    -fx-pref-width: 40;
+    -fx-pref-height: 40;
+}
+.btn_list_delete{
+    -fx-background-color: #EF5463 ;
+    -fx-content-display: CENTER;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-family: "Product Sans";
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-graphic-text-gap: 4;
+    -fx-pref-width: 20;
+    -fx-pref-height: 50;
+}
+.bnt_list_min{
+    -fx-background-radius: 30;
+    -fx-content-display: CENTER;
+    -fx-alignment: CENTER_LEFT;
+    -fx-pref-width: 40;
+    -fx-pref-height: 40;
+}
+
+.button-dialog{
+    -fx-text-fill: #EF5463;
+    -fx-background-radius: 5;
+}
+.jfx-snackbar-content{
+    -fx-pref-height: 30;
+    -fx-padding: 4;
+    -fx-background-color: #7C4923;
+    -fx-background-radius: 30;
+    -fx-fill: white;
+}
+
+.jfx-snackbar-toast{
+    -fx-fill: white;
+}
+.dialog-style{
+    -fx-start-margin: 16;
+    -fx-end-margin: 16;
+}
+
+.bnt_list_min2{
+    -fx-background-radius : 20;
+    -fx-background-color: #7C4923;
+    -fx-content-display: CENTER;
+    -fx-alignment: CENTER;
+    -fx-font-family: "Product Sans";
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-graphic-text-gap: 4;
+    -fx-pref-width: 20;
+    -fx-pref-height: 20;
+}
+.bnt_list_add2{
+    -fx-background-radius : 20;
+    -fx-background-color: #7C4923;
+    -fx-content-display: CENTER;
+    -fx-alignment: CENTER;
+    -fx-font-family: "Product Sans";
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-graphic-text-gap: 4;
+    -fx-pref-width: 20;
+    -fx-pref-height: 20;
+}
+.icon_list_add{
+    -fx-alignment: CENTER;
+    -fx-fill: white;
+    -size: 24;
+}
+.icon_list_min{
+    -fx-alignment: CENTER;
+    -fx-fill: white;
+    -size: 16;
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="orderResumePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.OrderResumeController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FECE55;">
+         <top>
+            <JFXToolbar prefHeight="70.0" BorderPane.alignment="CENTER">
+               <center>
+                  <Text fill="#7c4923" strokeType="OUTSIDE" strokeWidth="0.0" text="•  ORDER RESUME•" translateX="-20.0" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Product Sans Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </center>
+               <padding>
+                  <Insets bottom="8.0" />
+               </padding>
+               <left>
+                  <JFXButton fx:id="btnBack" contentDisplay="CENTER" onAction="#goBack" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 30;" text=" " textFill="#7c4923" translateX="8.0" translateY="4.0" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <MaterialDesignIconView fill="#7c4923" glyphName="ARROW_LEFT" size="24" />
+                     </graphic>
+                  </JFXButton>
+               </left>
+               <bottom>
+                  <HBox alignment="CENTER" prefHeight="58.0" prefWidth="390.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="78.0" prefWidth="221.0">
+                           <children>
+                              <Text fx:id="txtCustomerName" fill="#7c4923" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Awesome Name">
+                                 <font>
+                                    <Font name="Product Sans" size="16.0" />
+                                 </font>
+                              </Text>
+                              <JFXTextField fx:id="etEditName" focusColor="#7c4923" onKeyReleased="#validateText" prefHeight="25.0" prefWidth="235.0">
+                                 <VBox.margin>
+                                    <Insets left="16.0" right="16.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </VBox>
+                        <JFXButton fx:id="btnEdit" contentDisplay="CENTER" onAction="#editName" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 30;" text=" ">
+                           <graphic>
+                              <MaterialDesignIconView fx:id="icon_edit" fill="#7c4923" glyphName="BORDER_COLOR" size="24" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </bottom>
+            </JFXToolbar>
+         </top>
+         <center>
+            <VBox prefHeight="310.0" prefWidth="390.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#7c4923" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Order:">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="16.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Product Sans Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <JFXListView fx:id="listview" prefHeight="270.0" prefWidth="390.0" />
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="390.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#7c4923" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL :">
+                     <font>
+                        <Font name="Product Sans Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="24.0" />
+                     </HBox.margin>
+                  </Text>
+                  <AnchorPane prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #7C4923; -fx-background-radius: 30;">
+                     <children>
+                        <Text fx:id="txtSumHarga" fill="WHITE" layoutX="12.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0K" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="12.0">
+                           <font>
+                              <Font name="Product Sans Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="16.0" top="5.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <JFXButton fx:id="btnFinish" onAction="#finish" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #EF5463;" text="FINISH" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Product Sans Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../main.css" />
+   </stylesheets>
+</StackPane>

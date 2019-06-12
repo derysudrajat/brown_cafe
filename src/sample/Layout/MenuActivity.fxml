@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.MenuController">
+   <children>
+      <AnchorPane prefHeight="410.0" prefWidth="390.0" style="-fx-background-color: #FECE55;">
+         <children>
+            <JFXToolbar prefHeight="50.0" prefWidth="390.0">
+               <right>
+                  <JFXButton fx:id="btnMenu" contentDisplay="CENTER" onAction="#openMenu" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 20;" text=" " translateX="-5.0" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <MaterialDesignIconView fill="#7c4923" glyphName="DOTS_VERTICAL" size="24" />
+                     </graphic>
+                  </JFXButton>
+               </right>
+               <left>
+                  <Text fill="#7c4923" strokeType="OUTSIDE" strokeWidth="0.0" text="Brown Cafe" translateX="32.0" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Product Sans" size="16.0" />
+                     </font>
+                  </Text>
+               </left>
+            </JFXToolbar>
+            <Text fill="#7c4923" layoutX="117.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="•  MENU •">
+               <font>
+                  <Font name="Product Sans Bold" size="36.0" />
+               </font>
+            </Text>
+            <GridPane alignment="CENTER" layoutX="60.0" layoutY="115.0" prefHeight="281.0" prefWidth="289.0" style="-fx-alignment: center;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <JFXButton fx:id="btnMenuIndo" alignment="CENTER" contentDisplay="TOP" onAction="#goToMenu1" prefHeight="140.0" prefWidth="110.0" style="-fx-background-radius: 40;" text="Indonesian Food">
+                     <GridPane.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </GridPane.margin>
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/ic_indo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMenuJapan" alignment="CENTER" contentDisplay="TOP" onAction="#goToMenu2" prefHeight="140.0" prefWidth="110.0" style="-fx-background-radius: 40;" text="Japanese Food" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </GridPane.margin>
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/ic_japan.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMenuJuice" alignment="CENTER" contentDisplay="TOP" onAction="#goToMenu3" prefHeight="140.0" prefWidth="110.0" style="-fx-background-radius: 40;" text="Juice Menu" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </GridPane.margin>
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/ic_juice.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMenuCoffee" alignment="CENTER" contentDisplay="TOP" onAction="#goToMenu4" prefHeight="140.0" prefWidth="110.0" style="-fx-background-radius: 40;" text="Coffee Menu" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </GridPane.margin>
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/ic_coffee.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../main.css" />
+   </stylesheets>
+</StackPane>

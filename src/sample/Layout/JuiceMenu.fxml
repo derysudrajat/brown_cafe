@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="juiceStackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.JuiceMenuController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="390.0">
+         <top>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="390.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton contentDisplay="RIGHT" onAction="#sortPopuler" prefHeight="30.0" prefWidth="195.0" text="Populer" textFill="#7c4923" />
+                  <JFXButton contentDisplay="RIGHT" onAction="#sortHarga" prefHeight="30.0" prefWidth="195.0" text="Harga" textFill="#7c4923">
+                     <graphic>
+                        <HBox alignment="CENTER" prefHeight="20.0" prefWidth="18.0">
+                           <children>
+                              <MaterialDesignIconView fx:id="sortHargaIndicatorJuice" fill="#ef5463" glyphName="MENU_DOWN" size="24" />
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <JFXListView fx:id="listview" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../main.css" />
+   </stylesheets>
+</StackPane>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="menuCategoryPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.MenuCategoryController">
+   <children>
+      <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#LoadNotification" prefHeight="410.0" prefWidth="390.0" style="-fx-background-color: #FECE55;">
+         <top>
+            <JFXToolbar prefHeight="50.0" BorderPane.alignment="CENTER">
+               <right>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="156.0" BorderPane.alignment="CENTER">
+                     <opaqueInsets>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </opaqueInsets>
+                     <children>
+                        <AnchorPane prefHeight="50.0" prefWidth="50.0">
+                           <children>
+                              <JFXButton fx:id="btnCart" contentDisplay="CENTER" layoutX="5.0" layoutY="5.0" onAction="#gotoCart" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 20;" text=" ">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#7c4923" glyphName="CLIPBOARD_TEXT" size="24" wrappingWidth="23.0" />
+                                 </graphic>
+                              </JFXButton>
+                              <AnchorPane fx:id="notifPane" layoutX="26.0" layoutY="4.0" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #EF5463; -fx-background-radius: 20;" visible="false">
+                                 <children>
+                                    <Text fx:id="qtyNotif" fill="WHITE" layoutX="4.0" layoutY="15.0" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="12.607999801635742" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.392000198364258" AnchorPane.topAnchor="3.0">
+                                       <font>
+                                          <Font name="Product Sans" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <JFXButton fx:id="btnMenu" contentDisplay="CENTER" onAction="#showMenu" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 20;" text=" ">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7c4923" glyphName="DOTS_VERTICAL" size="24" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets right="8.0" />
+                     </padding>
+                  </HBox>
+               </right>
+               <left>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="176.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="btnBack" contentDisplay="CENTER" onAction="#goBack" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 30;" text=" " textFill="#7c4923">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7c4923" glyphName="ARROW_LEFT" size="24" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="8.0" right="8.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <Text fx:id="txtTittle" fill="#7c4923" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu">
+                           <font>
+                              <Font name="Product Sans" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </left>
+            </JFXToolbar>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="390.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnMenuIndo" contentDisplay="TOP" graphicTextGap="2.0" onAction="#gotoMenuIndo" prefHeight="50.0" prefWidth="97.5" text="Indonesian">
+                     <font>
+                        <Font name="Product Sans Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/ic_indo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMenuJpn" contentDisplay="TOP" graphicTextGap="2.0" onAction="#gotoMenuJapan" prefHeight="50.0" prefWidth="97.5" text="Japanese">
+                     <font>
+                        <Font name="Product Sans Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/ic_japan.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMenuJuice" contentDisplay="TOP" graphicTextGap="2.0" onAction="#gotoMenuJuice" prefHeight="50.0" prefWidth="97.5" text="Juice">
+                     <font>
+                        <Font name="Product Sans Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/ic_juice.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMenuCoffee" contentDisplay="TOP" graphicTextGap="2.0" onAction="#gotoMenuCoffee" prefHeight="50.0" prefWidth="97.5" text="Coffee">
+                     <font>
+                        <Font name="Product Sans Bold" size="10.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/ic_coffee.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCheckOut" onAction="#gotoCheckout" prefHeight="50.0" prefWidth="390.0" style="-fx-background-color: #EF5463;" text="CHECKOUT" textFill="WHITE">
+                     <font>
+                        <Font name="Product Sans Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <AnchorPane fx:id="content" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnMin" contentDisplay="CENTER" layoutX="149.0" layoutY="150.0" onAction="#min" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 30;" text=" ">
+                     <graphic>
+                        <MaterialDesignIconView fill="#7c4923" glyphName="MINUS" size="24" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnPlus" contentDisplay="CENTER" layoutX="169.0" layoutY="130.0" onAction="#add" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 30; -fx-background-color: #7C4923;" text=" " textFill="WHITE">
+                     <graphic>
+                        <MaterialDesignIconView fx:id="iconAdd" fill="WHITE" glyphName="PLUS" size="24" />
+                     </graphic>
+                     <font>
+                        <Font name="Product Sans Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXCheckBox fx:id="cbTest" checkedColor="#7c4923" layoutX="120.0" layoutY="204.0" text="Press Me" textFill="#7c4923" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../main.css" />
+   </stylesheets>
+</StackPane>
